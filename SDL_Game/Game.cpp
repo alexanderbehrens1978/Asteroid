@@ -100,16 +100,9 @@ void CGame::Run()
 		SpawnAsteroids();
 
 		// Kollisionen prüfen
-		CheckCollisions();
+		CheckCollisions();     // Game.cpp
 
-
-		auto playerX = m_pPlayer->GetX();
-		auto playerY = m_pPlayer->GetY();
-		//auto AsteroidX = m_pSpriteAsteroid;
-		//cout << "m_pPlayer x: " << playerX << " | m_pPlayer y: " << playerY << endl;
-
-
-
+		
 		// Asteroiden rendern
 		RenderAsteroids();
 

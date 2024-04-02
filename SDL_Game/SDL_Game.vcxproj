@@ -160,12 +160,16 @@
     <ClInclude Include="Framework.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Player.hpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Shot.hpp" />
     <ClInclude Include="Sprite.hpp" />
     <ClInclude Include="Timer.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\axell\OneDrive\Dokumente\SDL 2\SDL_Game-master\SDL_Game-master\README.md" />
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SDL_Game.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

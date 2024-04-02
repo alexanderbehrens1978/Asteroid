@@ -1,4 +1,23 @@
-// Asteroid.cpp
+//********************************************************************
+//*                                                                  *
+//*                      K l a s s e    CAsteroid                    *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*                      Dateiname   Asteroid.cpp                    *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//* Aufgabe: Diese Klasse repräsentiert einen Asteroiden. Für die    *
+//*          grafische Darstellung des Asteroiden hat diese Klasse   *
+//*          ein Sprite als Membervariable. Alle Asteroiden werden   *
+//*          in eine Liste geschoben und später nacheinander         *
+//*          bearbeitet.                                             *
+//*                                                                  *
+//********************************************************************
+//
+// Todo umbenennen in CAsteroid.cpp
+//
 #include <iostream>
 #include "Asteroid.hpp"
 using namespace std;

@@ -1,3 +1,27 @@
+//********************************************************************
+//*                                                                  *
+//*                      K l a s s e    CFramework                   *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*                      Dateiname   Framework.cpp                   *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//* Aufgabe: Diese Klasse sorgt dafür, dass die SDL initialisiert    *
+//*          und wieder heruntergefahren wird. Alle im Spiel         *
+//*          gerenderten(gezeichneten) Objekte werden hier dann      *
+//*          entgültig auf den Bildschirm gebracht (dazu später      *
+//*          eine genauere Erklärung). Ausserdem wird hier der       *
+//*          spielinterne Zeitgeber (Timer) aktualisiert sowie der   *
+//*          aktuelle Status der Tastatur abgefragt                  *
+//*                                                                  *
+//********************************************************************
+//
+// Todo umbenennen in CFramework.cpp
+// Todo Erklärung erweitern
+//
+
 #include "Framework.hpp"
 
 // Konstruktor
