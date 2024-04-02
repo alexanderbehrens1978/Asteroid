@@ -105,8 +105,8 @@ void CGame::Run()
 
 		auto playerX = m_pPlayer->GetX();
 		auto playerY = m_pPlayer->GetY();
-		auto AsteroidX = m_pSpriteAsteroid.
-		cout << "m_pPlayer x: " << x << " | m_pPlayer y: " << y << endl;
+		//auto AsteroidX = m_pSpriteAsteroid;
+		//cout << "m_pPlayer x: " << playerX << " | m_pPlayer y: " << playerY << endl;
 
 
 

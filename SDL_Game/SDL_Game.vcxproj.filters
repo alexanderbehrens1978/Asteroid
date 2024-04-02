@@ -66,4 +66,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\axell\OneDrive\Dokumente\SDL 2\SDL_Game-master\SDL_Game-master\README.md">
+      <Filter>Quelldateien</Filter>
+    </None>
+  </ItemGroup>
 </Project>

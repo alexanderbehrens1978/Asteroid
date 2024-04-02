@@ -10,14 +10,14 @@ class CPlayer
 {
 	public:
 		CPlayer     ();
-		void Init   ();
-		void Quit   ();
-		void Render ();
-		void Update ();
-		void Reset  ();
-		list<CShot> *GetShotList() { return &m_ShotList; }
-		int GetX();
-		int GetY();
+		void Init   ();	// Spiel Initialisieren
+		void Quit   ();	// Spiel Beenden
+		void Render ();	// Spieler neuzeichnen
+		void Update ();	// Spieler updaten
+		void Reset  ();	// Spieler zurück setzen
+		list<CShot> *GetShotList() { return &m_ShotList; }	// Irgendwas mit schiessen
+		int GetX();		// X-Position des Spielers
+		int GetY();		// Y-Position des Spielers
 	
 	private:
 		void ProcessMoving   ();

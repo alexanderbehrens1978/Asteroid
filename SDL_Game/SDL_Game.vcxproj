@@ -71,20 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\source\alexanderbehrens1978\SDL_Game\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\source\alexanderbehrens1978\SDL_Game\lib\x64;C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\source\alexanderbehrens1978\SDL_Game\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\source\alexanderbehrens1978\SDL_Game\lib\x64;C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\source\alexanderbehrens1978\SDL_Game\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\source\alexanderbehrens1978\SDL_Game\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projekte\SDL_Game\SDL2-devel-2.24.0-VC\SDL2-2.24.0\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\source\alexanderbehrens1978\SDL_Game\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\source\alexanderbehrens1978\SDL_Game\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -163,6 +163,9 @@
     <ClInclude Include="Shot.hpp" />
     <ClInclude Include="Sprite.hpp" />
     <ClInclude Include="Timer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\axell\OneDrive\Dokumente\SDL 2\SDL_Game-master\SDL_Game-master\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

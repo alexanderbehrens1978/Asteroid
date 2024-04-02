@@ -13,8 +13,8 @@ class CAsteroid
 		bool IsAlive	 () { return m_bIsAlive; }
 		void SetAlive	 (bool bIsAlive) { m_bIsAlive = bIsAlive; }
 		SDL_Rect GetRect () { return m_Rect; }
-		int GetX();
-		int GetY();
+		int GetX();		 // gibt die aktuelle X-Position des Asteroiden wieder
+		int GetY();		 // gibt die aktuelle Y-Position des Asteroiden wieder
 
 	private:
 		CSprite *m_pSpriteAsteroid;		// Zeiger auf Asteroiden-Sprite

@@ -14,13 +14,13 @@ class CFramework : public TSingleton<CFramework>
 {
 	public:
 			CFramework();
-		bool Init	 (int ScreenWidth, int ScreenHeight,
+		bool Init	 (int ScreenWidth, int ScreenHeight,	// Spielfeld Breite, Höhe, Farbtiefe, Vollbild j/n
 		   		      int ColorDepth, bool bFullscreen);
-		void Quit	 ();
-		void Update	 ();
-		void Clear	 ();
-		void Render	 ();
-		bool KeyDown (int Key_ID);
+		void Quit	 ();	// Beenden
+		void Update	 ();	// Anzeige aktualisieren
+		void Clear	 ();	// Anzeige säubern
+		void Render	 ();	// Anzeige neuzeichnen
+		bool KeyDown (int Key_ID);	// Wurde eine Taste gedrückt
 		SDL_Renderer* GetRenderer() { return m_pRenderer; }
 
 	private:

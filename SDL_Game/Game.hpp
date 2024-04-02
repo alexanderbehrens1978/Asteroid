@@ -10,9 +10,9 @@ class CGame
 	public:
 		CGame();
 
-		void Init ();
-		void Run  ();
-		void Quit ();
+		void Init ();		// Initialiseren
+		void Run  ();		// Starten
+		void Quit ();		// Beenden
 	
 	private:
 		void ProcessEvents   ();
@@ -23,8 +23,8 @@ class CGame
 		CPlayer *m_pPlayer;				// Spieler-Instanz
 		CSprite *m_pSpriteBackground;	// Sprite für den Hintergrund
 		CSprite *m_pSpriteAsteroid;		// Sprite für die Asteroiden
-		float    m_fAsteroidTimer;			// Zeitgeber für nächsten Asteroiden
-		bool     m_bGameRun;				// Läuft das Spiel noch?
+		float    m_fAsteroidTimer;		// Zeitgeber für nächsten Asteroiden
+		bool     m_bGameRun;			// Läuft das Spiel noch?
 		list<CAsteroid> m_AsteroidList;	// Liste der Asteroiden
 
 }; // CGame

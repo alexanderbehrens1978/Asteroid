@@ -1,6 +1,7 @@
 // Asteroid.cpp
-
+#include <iostream>
 #include "Asteroid.hpp"
+using namespace std;
 
 // Init
 //
