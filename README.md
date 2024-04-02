@@ -24,3 +24,4 @@ TODO:
 - Musik im Hintergrund
 - Sound beim abgeben eines Schusses
 - Highscore Liste
+- Alle Klasse und Dateinamen anpassen
