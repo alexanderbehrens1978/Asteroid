@@ -3,8 +3,8 @@
 #define PLAYER_HPP
 
 #include <list>
-#include "Sprite.hpp"
-#include "Shot.hpp"
+#include "CSprite.hpp"
+#include "CShot.hpp"
 
 class CPlayer
 {

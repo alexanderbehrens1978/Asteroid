@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "singleton.hpp"
-#include "Timer.hpp"
+#include "CTimer.hpp"
 
 using namespace std;
 

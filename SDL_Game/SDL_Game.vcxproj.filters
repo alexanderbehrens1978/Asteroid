@@ -18,51 +18,51 @@
     <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.cpp">
+    <ClCompile Include="CTimer.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="singleton.hpp">
       <Filter>Headerdateien</Filter>
     </ClCompile>
-    <ClCompile Include="Framework.cpp">
+    <ClCompile Include="CFramework.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp">
+    <ClCompile Include="CSprite.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Shot.cpp">
+    <ClCompile Include="CShot.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="CPlayer.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="CGame.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Asteroid.cpp">
+    <ClCompile Include="CAsteroid.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Timer.hpp">
+    <ClInclude Include="CTimer.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Framework.hpp">
+    <ClInclude Include="CFramework.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.hpp">
+    <ClInclude Include="CSprite.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Shot.hpp">
+    <ClInclude Include="CShot.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Asteroid.hpp">
+    <ClInclude Include="CAsteroid.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Player.hpp">
+    <ClInclude Include="CPlayer.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Game.hpp">
+    <ClInclude Include="CGame.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">

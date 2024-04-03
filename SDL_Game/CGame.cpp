@@ -1,7 +1,23 @@
-// Game.cpp
-#include "Game.hpp"
-
-
+//********************************************************************
+//*                                                                  *
+//*                      K l a s s e    CGame                        *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*                      Dateiname   CGame.cpp                       *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//* Aufgabe: Hier findet die eigentliche Spiellogik statt. Dazu      *
+//*          gehören unter anderem das Hinzufügen und Rendern        *
+//*          von Asteroiden, das Rendern des Hintergrundbildes       *
+//*          und die Kollisionsprüfung zwischen Asteroiden und       *
+//*          Schüssen.                                               *
+//*                                                                  *
+//********************************************************************
+//
+#include "CGame.hpp"
+//
 // Konstruktor
 //
 // Aufgabe: Allgemeine Initialisierungen

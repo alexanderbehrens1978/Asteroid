@@ -2,8 +2,8 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
-#include "Player.hpp"
-#include "Asteroid.hpp"
+#include "CPlayer.hpp"
+#include "CAsteroid.hpp"
 
 class CGame
 {

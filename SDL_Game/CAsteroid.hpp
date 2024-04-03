@@ -2,7 +2,7 @@
 #ifndef ASTEROID_HPP
 #define ASTEROID_HPP
 
-#include "Sprite.hpp"
+#include "CSprite.hpp"
 
 class CAsteroid
 {

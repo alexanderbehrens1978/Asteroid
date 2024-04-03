@@ -2,7 +2,7 @@
 #ifndef SHOT_HPP
 #define SHOT_HPP
 
-#include "Sprite.hpp"
+#include "CSprite.hpp"
 
 class CShot
 {

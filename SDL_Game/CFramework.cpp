@@ -4,7 +4,7 @@
 //*                                                                  *
 //********************************************************************
 //*                                                                  *
-//*                      Dateiname   Framework.cpp                   *
+//*                      Dateiname   CFramework.cpp                  *
 //*                                                                  *
 //********************************************************************
 //*                                                                  *
@@ -14,16 +14,16 @@
 //*          entgültig auf den Bildschirm gebracht (dazu später      *
 //*          eine genauere Erklärung). Ausserdem wird hier der       *
 //*          spielinterne Zeitgeber (Timer) aktualisiert sowie der   *
-//*          aktuelle Status der Tastatur abgefragt                  *
+//*          aktuelle Status der Tastatur abgefragt.                 *
 //*                                                                  *
 //********************************************************************
 //
 // Todo umbenennen in CFramework.cpp
 // Todo Erklärung erweitern
 //
-
-#include "Framework.hpp"
-
+//
+#include "CFramework.hpp"
+//
 // Konstruktor
 //
 // Aufgabe: Allgemeine Initialisierungen

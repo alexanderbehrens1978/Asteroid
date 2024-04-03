@@ -1,6 +1,22 @@
-// Player.cpp
-#include "Player.hpp"
-
+//********************************************************************
+//*                                                                  *
+//*                      K l a s s e    CPlayer                      *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*                      Dateiname   CPlayer.cpp                     *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//* Aufgabe: Die Spieler-Klasse. Sie beinhaltet neben der Position   *
+//*          und dem Sprite des Spielers auch eine Liste aus CShot-  *
+//*          Instanzen. Die Steuerung des Spielers findet ebenfalls  *
+//*          hier statt.                                             *
+//*                                                                  *
+//********************************************************************
+//
+#include "CPlayer.hpp"
+//
 // Konstruktor
 //
 // Aufgabe: Allgemeine Initialisierungen

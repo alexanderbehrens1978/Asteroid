@@ -1,6 +1,24 @@
-// Sprite.cpp
-#include "Sprite.hpp"
-
+//********************************************************************
+//*                                                                  *
+//*                      K l a s s e    CSprite                      *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*                      Dateiname   CSprite.cpp                     *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//* Aufgabe: Ein Sprite ist ein grafisches, zweidimensionales        *
+//*          Objekt, das auf dem Bildschirm dargestellt werden       *
+//*          kann (auch dazu später mehr). Diese Klasse kümmert      *
+//*          sich darum, dass die gewünschte Grafik aus einer        *
+//*          Bitmap-Datei geladen wird und auf dem Bildschirm        *
+//*          angezeigt werden kann.                                  *
+//*                                                                  *
+//********************************************************************
+//
+#include "CSprite.hpp"
+//
 // Konstruktor
 //
 // Aufgabe: Zeiger auf Renderer holen

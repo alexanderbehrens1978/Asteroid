@@ -8,8 +8,8 @@
 // Game.cpp ist wichtig
 // 
 //
-#include "Framework.hpp"
-#include "Game.hpp"
+#include "CFramework.hpp"
+#include "CGame.hpp"
 
 
 

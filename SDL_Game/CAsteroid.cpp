@@ -4,7 +4,7 @@
 //*                                                                  *
 //********************************************************************
 //*                                                                  *
-//*                      Dateiname   Asteroid.cpp                    *
+//*                      Dateiname   CAsteroid.cpp                   *
 //*                                                                  *
 //********************************************************************
 //*                                                                  *
@@ -19,9 +19,9 @@
 // Todo umbenennen in CAsteroid.cpp
 //
 #include <iostream>
-#include "Asteroid.hpp"
+#include "CAsteroid.hpp"
 using namespace std;
-
+//
 // Init
 //
 // Aufgabe: Asteroid initialisieren

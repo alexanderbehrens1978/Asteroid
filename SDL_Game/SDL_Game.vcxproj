@@ -145,25 +145,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Asteroid.cpp" />
-    <ClCompile Include="Framework.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="CAsteroid.cpp" />
+    <ClCompile Include="CFramework.cpp" />
+    <ClCompile Include="CGame.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Shot.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CShot.cpp" />
     <ClCompile Include="singleton.hpp" />
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="CSprite.cpp" />
+    <ClCompile Include="CTimer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Asteroid.hpp" />
-    <ClInclude Include="Framework.hpp" />
-    <ClInclude Include="Game.hpp" />
-    <ClInclude Include="Player.hpp" />
+    <ClInclude Include="CAsteroid.hpp" />
+    <ClInclude Include="CFramework.hpp" />
+    <ClInclude Include="CGame.hpp" />
+    <ClInclude Include="CPlayer.hpp" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Shot.hpp" />
-    <ClInclude Include="Sprite.hpp" />
-    <ClInclude Include="Timer.hpp" />
+    <ClInclude Include="CShot.hpp" />
+    <ClInclude Include="CSprite.hpp" />
+    <ClInclude Include="CTimer.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

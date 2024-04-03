@@ -2,7 +2,7 @@
 #ifndef SPRITE_HPP
 #define SPRITE_HPP
 
-#include "Framework.hpp" 
+#include "CFramework.hpp" 
 
 // Bei Wellen #include dann liegt die
 // Datei nicht bei den anderen Quelldateien
