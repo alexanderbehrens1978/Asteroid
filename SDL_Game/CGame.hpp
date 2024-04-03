@@ -18,7 +18,8 @@ class CGame
 		void ProcessEvents   ();
 		void SpawnAsteroids  ();
 		void RenderAsteroids ();
-		void CheckCollisions ();
+		void CheckCollisionsShootAsteroid ();
+		void CheckCollisionsAsteroidShip();
 
 		CPlayer *m_pPlayer;				// Spieler-Instanz
 		CSprite *m_pSpriteBackground;	// Sprite für den Hintergrund

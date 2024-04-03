@@ -18,9 +18,10 @@ Aktuell geht nur die 64Bit Version
 Game.cpp ist wichtig !
 
 TODO:
-- Kollision geht nicht
+- Kollision Asteroid mit Schiff geht nicht
 - Punktestand anzeigen
 - Computergegner
 - Musik im Hintergrund
 - Sound beim abgeben eines Schusses
 - Highscore Liste
+- Splashscreen

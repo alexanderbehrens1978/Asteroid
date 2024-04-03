@@ -116,7 +116,7 @@ void CGame::Run()
 		SpawnAsteroids();
 
 		// Kollisionen prüfen
-		CheckCollisions();     // Game.cpp
+		CheckCollisionsShootAsteroid();     // Game.cpp
 
 		
 		// Asteroiden rendern
@@ -210,7 +210,7 @@ void CGame::SpawnAsteroids()
 //
 // Aufgabe: Kollisionen zwischen Asteroiden und Schüssen prüfen
 //
-void CGame::CheckCollisions()
+void CGame::CheckCollisionsShootAsteroid()
 {
 
 	// Schussliste des Spielers holen
@@ -223,8 +223,8 @@ void CGame::CheckCollisions()
 	
 
 	// Rects für Asteroiden und Schüsse
-	SDL_Rect RectAsteroid;
-	SDL_Rect RectShot;
+	SDL_Rect RectAsteroid; // Asteroid
+	SDL_Rect RectShot; // Schuss
 
 	// Alle Asteroiden durchlaufen
 	while (ItAsteroid != m_AsteroidList.end() )
@@ -264,6 +264,63 @@ void CGame::CheckCollisions()
 
 } // CheckCollision
 
+// CheckCollisionsAsteroidShip
+//
+// Aufgabe: Kollisionen zwischen Asteroiden und Schiff prüfen
+//
+void CGame::CheckCollisionsAsteroidShip()
+{
+
+	// Schussliste des Spielers holen
+	list<CShot>* ShotList = m_pPlayer->GetShotList();
+
+	// Iteratoren für Asteroiden- und Schussliste
+	list<CAsteroid>::iterator ItAsteroid = m_AsteroidList.begin();
+	list<CShot>::iterator ItShot;
+	// Raumschiff ? mit list<Wo auch immer das Raumschiff ist>::iterator ? mPlayer
+
+
+	// Rects für Asteroiden und Schiff
+	SDL_Rect RectAsteroid;
+	SDL_Rect RectShip; // Muss gegen Schiff getauscht werden
+
+	// Alle Asteroiden durchlaufen
+	while (ItAsteroid != m_AsteroidList.end())
+	{
+		// Rect des Asteroiden holen
+		RectAsteroid = ItAsteroid->GetRect();
+
+		// Alle Schüsse durchlaufen
+		for (ItShot = ShotList->begin();
+			ItShot != ShotList->end();
+			++ItShot)
+		{
+			// Rect des Schusses holen
+			RectShip = ItShot->GetRect();
+
+			if (RectShip.y < RectAsteroid.y + RectAsteroid.h &&
+				RectShip.y + RectShip.h > RectAsteroid.y &&
+				RectShip.x < RectAsteroid.x + RectAsteroid.w &&
+				RectShip.x + RectShip.w > RectAsteroid.x)
+
+			{
+				// Ja, also gab es eine Kollision. Somit Schuss und 
+				// Asteroid deaktivieren
+				ItAsteroid->SetAlive(false);
+				ItShot->SetAlive(false);
+
+			}
+		}
+
+		// Asteroid löschen, falls deaktiviert
+		if (ItAsteroid->IsAlive())
+			ItAsteroid++;
+		else
+			ItAsteroid = m_AsteroidList.erase(ItAsteroid);
+
+	}
+
+} // CheckCollisionAsteroidShip
 
 // RenderAsteroids
 //
@@ -282,7 +339,6 @@ void CGame::RenderAsteroids ()
 	
 		// Asteroid updaten
 		It->Update ();
-
 
 	}
 
