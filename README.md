@@ -25,3 +25,10 @@ TODO:
 - Sound beim abgeben eines Schusses
 - Highscore Liste
 - Alle Klasse und Dateinamen anpassen
+- Splashscreen
+- unterschiedliche Level
+- Powerups
+- Healthdrop
+- Extra Leben
+- bewegliche Leinwand
+
