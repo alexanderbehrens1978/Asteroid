@@ -13,6 +13,7 @@ class CGame
 		void Init ();		// Initialiseren
 		void Run  ();		// Starten
 		void Quit ();		// Beenden
+		int SplashScreen();	// SplashScreen
 	
 	private:
 		void ProcessEvents   ();

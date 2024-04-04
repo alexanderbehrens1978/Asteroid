@@ -10,6 +10,7 @@
 //
 #include "CFramework.hpp"
 #include "CGame.hpp"
+// 04.04.2024
 
 
 
@@ -25,6 +26,9 @@ int main(int argc, char* argv[])
 
 	// Spiel initialisieren
 	Game.Init();
+
+	// SplashScreen
+	Game.SplashScreen(); // 04.04.2024
 
 	// Spiel laufen lassen. Diese Funktion läuft so lange,
 	// bis das Spiel geschlossen oder die Escape-Taste

@@ -17,6 +17,7 @@
 //********************************************************************
 //
 #include "CGame.hpp"
+#include <iostream>
 //
 // Konstruktor
 //
@@ -34,7 +35,7 @@ CGame::CGame()
 //
 // Aufgabe: Spieler, Hintergrund und Asteroid initialisieren
 //
-void CGame::Init()
+void CGame::Init()	// public
 {
 	// Neuen Spieler initialisieren
 	m_pPlayer = new CPlayer;
@@ -61,7 +62,7 @@ void CGame::Init()
 //
 // Aufgabe: Instanzen freigeben
 //
-void CGame::Quit()
+void CGame::Quit()	// public
 {
 	// Spieler freigeben
 	if (m_pPlayer != NULL)
@@ -92,7 +93,7 @@ void CGame::Quit()
 //
 // Aufgabe: Hauptschleife des Spiels
 //
-void CGame::Run()
+void CGame::Run()	// public
 {
 	// Hauptschleife des Spiels durchlaufen
 	//
@@ -116,8 +117,9 @@ void CGame::Run()
 		SpawnAsteroids();
 
 		// Kollisionen prüfen
-		CheckCollisionsShootAsteroid();     // Game.cpp
-
+		CheckCollisionsShootAsteroid(); // kann der Schuss den Asteroiden abschiessen
+		//CheckCollisionsAsteroidShip(); // beim berühren des Schiffs mit einem Asteroiden soll
+		                               // eine Meldung erscheinen
 		
 		// Asteroiden rendern
 		RenderAsteroids();
@@ -129,12 +131,54 @@ void CGame::Run()
 
 } // Run
 
+int CGame::SplashScreen()	// SplashScreen
+{
+	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	{
+		std::cout << "Failed to initialize the SDL2 library\n";
+		return -1;
+	}
+
+	SDL_Window* splashscreen = SDL_CreateWindow("Splash Screen",
+		1000, 200, // x, y
+		680, 480,
+		0);
+
+	if (!splashscreen)
+	{
+		std::cout << "Failed to create window\n";
+		return -1;
+	}
+
+	SDL_Surface* window_surface = SDL_GetWindowSurface(splashscreen);
+
+	if (!window_surface)
+	{
+		std::cout << "Failed to get the surface from the window\n";
+		return -1;
+	}
+
+	SDL_UpdateWindowSurface(splashscreen);
+
+
+	//SDL_Delay(5000);
+	// Renderer und Fenster freigeben
+
+	//if (splashscreen != NULL)
+	//{
+	//	SDL_DestroyWindow(splashscreen);
+	//}
+	
+}
+
+
+//############################## P r i v a t e ####################################
 
 // ProcessEvents
 // 
 // Aufgabe: Events bearbeiten
 //
-void CGame::ProcessEvents()
+void CGame::ProcessEvents()	// private
 {
 	SDL_Event Event;
 
@@ -163,6 +207,18 @@ void CGame::ProcessEvents()
 			
 					} break;
 
+					case(SDLK_F4):
+					{
+						// Ja, also Spiel beenden
+						m_bGameRun = false;
+					} break;
+
+					case(SDLK_F3):
+					{
+						// Ja, also Spiel beenden
+						m_bGameRun = false;
+					}
+
 					default:
 						break;
 				}
@@ -175,7 +231,7 @@ void CGame::ProcessEvents()
 //
 // Aufgabe: Nach Ablauf einer bestimmten Zeit neuen Asteroiden erzeugen
 //
-void CGame::SpawnAsteroids()
+void CGame::SpawnAsteroids()	// private
 {
 	// Timer für nächsten Asteroiden erhöhen
 	m_fAsteroidTimer += g_pTimer->GetElapsed();
@@ -210,7 +266,7 @@ void CGame::SpawnAsteroids()
 //
 // Aufgabe: Kollisionen zwischen Asteroiden und Schüssen prüfen
 //
-void CGame::CheckCollisionsShootAsteroid()
+void CGame::CheckCollisionsShootAsteroid()	// private
 {
 
 	// Schussliste des Spielers holen
@@ -268,8 +324,10 @@ void CGame::CheckCollisionsShootAsteroid()
 //
 // Aufgabe: Kollisionen zwischen Asteroiden und Schiff prüfen
 //
-void CGame::CheckCollisionsAsteroidShip()
+void CGame::CheckCollisionsAsteroidShip()	// private
 {
+	// Aufgabe: Überprüfen ob der Asteroid mit dem Schiff kollidiert
+	// 
 
 	// Schussliste des Spielers holen
 	list<CShot>* ShotList = m_pPlayer->GetShotList();
@@ -312,12 +370,6 @@ void CGame::CheckCollisionsAsteroidShip()
 			}
 		}
 
-		// Asteroid löschen, falls deaktiviert
-		if (ItAsteroid->IsAlive())
-			ItAsteroid++;
-		else
-			ItAsteroid = m_AsteroidList.erase(ItAsteroid);
-
 	}
 
 } // CheckCollisionAsteroidShip
@@ -326,7 +378,7 @@ void CGame::CheckCollisionsAsteroidShip()
 //
 // Aufgabe: Alle Asteroiden rendern und updaten
 //
-void CGame::RenderAsteroids ()
+void CGame::RenderAsteroids ()	// private
 {
 	// Iterator für die Asteroiden-Liste
 	list<CAsteroid>::iterator It;

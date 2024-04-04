@@ -44,7 +44,7 @@ bool CFramework::Init(int ScreenWidth, int ScreenHeight,
 					  int ColorDepth, bool bFullscreen)
 {
 	// Alle Systeme der SDL initialisieren
-	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) == -1)
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO) == -1)
 	{
 		cout << "SDL konnte nicht initialisiert werden!" << endl;
 		cout << "Fehlermeldung: " << SDL_GetError() << endl;
@@ -63,9 +63,9 @@ bool CFramework::Init(int ScreenWidth, int ScreenHeight,
 		WindowFlags = SDL_WINDOW_SHOWN;
 	
 
-	m_pWindow = SDL_CreateWindow("SDL_Game",
-								SDL_WINDOWPOS_UNDEFINED,
-								SDL_WINDOWPOS_UNDEFINED,
+	m_pWindow = SDL_CreateWindow("Asteroid",
+								200, //SDL_WINDOWPOS_UNDEFINED,
+								200, //SDL_WINDOWPOS_UNDEFINED,
 								ScreenWidth,
 								ScreenHeight,
 								WindowFlags);
