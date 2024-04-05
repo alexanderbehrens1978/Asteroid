@@ -79,4 +79,21 @@
       <Filter>Ressourcendateien</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Data\Asteroid.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="Data\Background.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="Data\GameOver.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="Data\Laser.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="Data\Player.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
