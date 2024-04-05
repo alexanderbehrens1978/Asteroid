@@ -109,7 +109,7 @@ void CGame::Run()	// public
 
 			// GameOver hinzufügen
 			//SpawnAsteroids() als Basis nehmen
-			ShowGameOver(); // Es sollte alles hier in einer Schleife laufen
+			//ShowGameOver(); // Es sollte alles hier in einer Schleife laufen
 			// und prüfen ob ShowGameOver() true oder false zurück gibt und darauf abbrechen
 
 			// GameOver rendern

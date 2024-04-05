@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	Game.Init();
 
 	// SplashScreen
-	Game.SplashScreen(); // 04.04.2024
+	//Game.SplashScreen(); // 04.04.2024
 
 	// Spiel laufen lassen. Diese Funktion läuft so lange,
 	// bis das Spiel geschlossen oder die Escape-Taste
