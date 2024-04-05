@@ -21,14 +21,17 @@
 //
 // Konstruktor
 //
-// //
 // Aufgabe: Allgemeine Initialisierungen
 //
 CGame::CGame()
 {
 	m_pPlayer = NULL;
+	m_fAsteroidTimer = NULL;
 	m_pSpriteBackground = NULL;
 	m_pSpriteAsteroid = NULL;
+	m_pSpriteGameOver = NULL;
+	m_bGameRun = false;
+	m_bGameOver = false;
 } // Konstruktor
 
 
@@ -51,12 +54,73 @@ void CGame::Init()	// public
 	m_pSpriteAsteroid = new CSprite;
 	m_pSpriteAsteroid->Load ("Data/Asteroid.bmp", 20, 64, 64);
 
+	// hier muss der Highscore hin
+	// Highscore als Bitmap mit den Zahlen 0 - 9
+
+	// hier muss das Gameover hin
+	// laden
+	m_pSpriteGameOver = new CSprite;
+	m_pSpriteGameOver->Load("Data/GameOver.bmp");
+
 	// Timer für Asteroiden zurücksetzen
 	m_fAsteroidTimer = 0.0f;
 	
 	// Spiel läuft
 	m_bGameRun = true;
 } // Init
+
+
+// Run
+//
+// Aufgabe: Hauptschleife des Spiels
+//
+void CGame::Run()	// public
+{
+	while (m_bGameOver != true)
+	{
+		// Hauptschleife des Spiels durchlaufen
+		//
+		while (m_bGameRun == true)
+		{
+			// Events bearbeiten
+			ProcessEvents();
+
+			// Framework updaten und Buffer löschen
+			g_pFramework->Update();
+			g_pFramework->Clear();
+
+			// Hintergrundbild rendern
+			m_pSpriteBackground->Render();
+
+			// Spieler updaten und rendern
+			m_pPlayer->Update();
+			m_pPlayer->Render();
+
+			// Neue Asteroiden hinzufügen
+			SpawnAsteroids();
+
+			// Kollisionen prüfen
+			CheckCollisionsShootAsteroid(); // kann der Schuss den Asteroiden abschiessen
+			//CheckCollisionsAsteroidShip(); // beim berühren des Schiffs mit einem Asteroiden soll
+										   // eine Meldung erscheinen
+
+			// Asteroiden rendern
+			RenderAsteroids();
+
+			// GameOver hinzufügen
+			//SpawnAsteroids() als Basis nehmen
+			ShowGameOver(); // Es sollte alles hier in einer Schleife laufen
+			// und prüfen ob ShowGameOver() true oder false zurück gibt und darauf abbrechen
+
+			// GameOver rendern
+			// RenderAsteroids() als Basis nehmen
+
+			// Spiel darstellen
+			g_pFramework->Render();
+
+		}
+	}
+} // Run
 
 
 // Quit
@@ -79,7 +143,7 @@ void CGame::Quit()	// public
 		delete (m_pSpriteBackground);
 		m_pSpriteBackground = NULL;
 	}
-	
+
 	// Asteroidensprite freigeben
 	if (m_pSpriteAsteroid != NULL)
 	{
@@ -87,50 +151,15 @@ void CGame::Quit()	// public
 		m_pSpriteBackground = NULL;
 	}
 
-} // Quit
-
-
-// Run
-//
-// Aufgabe: Hauptschleife des Spiels
-//
-void CGame::Run()	// public
-{
-	// Hauptschleife des Spiels durchlaufen
-	//
-	while (m_bGameRun == true)
+	// GameOversprite freigeben
+	if (m_pSpriteGameOver != NULL)
 	{
-		// Events bearbeiten
-		ProcessEvents();
-
-		// Framework updaten und Buffer löschen
-		g_pFramework->Update();
-		g_pFramework->Clear();
-
-		// Hintergrundbild rendern
-		m_pSpriteBackground->Render();
-
-		// Spieler updaten und rendern
-		m_pPlayer->Update();
-		m_pPlayer->Render();
-
-		// Neue Asteroiden hinzufügen
-		SpawnAsteroids();
-
-		// Kollisionen prüfen
-		CheckCollisionsShootAsteroid(); // kann der Schuss den Asteroiden abschiessen
-		//CheckCollisionsAsteroidShip(); // beim berühren des Schiffs mit einem Asteroiden soll
-		                               // eine Meldung erscheinen
-		
-		// Asteroiden rendern
-		RenderAsteroids();
-
-		// Spiel darstellen
-		g_pFramework->Render();
-
+		delete (m_pSpriteGameOver);
+		m_pSpriteGameOver = NULL;
 	}
 
-} // Run
+} // Quit
+
 
 int CGame::SplashScreen()	// SplashScreen
 {
@@ -261,6 +290,33 @@ void CGame::SpawnAsteroids()	// private
 	}
 
 } // SpawnAsteroids
+
+
+// ShowGameOver
+//
+// Aufgabe: Das Ende nach Kriterium X, Y
+//
+bool CGame::ShowGameOver()	// private
+{
+		
+		m_pSpriteGameOver->SetPos(250, 150); // x, y
+		m_pSpriteGameOver->Render();
+
+		//SDL_Delay(5000);
+		// Renderer und Fenster freigeben
+		
+		SDL_Delay(5000);
+		//SDL_QUIT;
+		//CGame::Quit();
+		//g_pFramework->Quit();
+		//SDL_Quit();
+		cout << "Game Over\n";
+
+		m_bGameRun = false;
+
+		return true;
+} // ShowGameOver()
+
 
 
 // CheckCollisions

@@ -18,6 +18,7 @@ class CGame
 	private:
 		void ProcessEvents   ();
 		void SpawnAsteroids  ();
+		bool ShowGameOver    ();
 		void RenderAsteroids ();
 		void CheckCollisionsShootAsteroid ();
 		void CheckCollisionsAsteroidShip();
@@ -25,8 +26,10 @@ class CGame
 		CPlayer *m_pPlayer;				// Spieler-Instanz
 		CSprite *m_pSpriteBackground;	// Sprite für den Hintergrund
 		CSprite *m_pSpriteAsteroid;		// Sprite für die Asteroiden
+		CSprite* m_pSpriteGameOver;		// Sprite für GameOver
 		float    m_fAsteroidTimer;		// Zeitgeber für nächsten Asteroiden
 		bool     m_bGameRun;			// Läuft das Spiel noch?
+		bool     m_bGameOver;			// GameOver
 		list<CAsteroid> m_AsteroidList;	// Liste der Asteroiden
 
 }; // CGame
