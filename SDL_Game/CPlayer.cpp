@@ -21,6 +21,7 @@
 //
 // Aufgabe: Allgemeine Initialisierungen
 //
+//
 CPlayer::CPlayer()
 {
 	m_pSpritePlayer = NULL;

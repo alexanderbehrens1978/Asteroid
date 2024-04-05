@@ -21,6 +21,7 @@
 //
 // Konstruktor
 //
+// //
 // Aufgabe: Allgemeine Initialisierungen
 //
 CGame::CGame()
