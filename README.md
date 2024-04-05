@@ -24,4 +24,15 @@ TODO:
 - Musik im Hintergrund
 - Sound beim abgeben eines Schusses
 - Highscore Liste
+<<<<<<< HEAD
 - Splashscreen
+=======
+- Alle Klasse und Dateinamen anpassen
+- Splashscreen
+- unterschiedliche Level
+- Powerups
+- Healthdrop
+- Extra Leben
+- bewegliche Leinwand
+
+>>>>>>> 1f0f5cb4849649e9fc416931d9dd42bc51f67bce

@@ -5,13 +5,12 @@
 // Als x64 Debug läuft das Programm !
 // Kollision klappt nicht
 // 
-// Game.cpp ist wichtig
+// CGame.cpp ist wichtig
 // 
 //
 #include "CFramework.hpp"
 #include "CGame.hpp"
 // 04.04.2024
-
 
 
 int main(int argc, char* argv[])
