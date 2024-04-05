@@ -18,7 +18,7 @@ Aktuell geht nur die 64Bit Version
 Game.cpp ist wichtig !
 
 TODO:
-- Kollision Asteroid mit Schiff geht nicht
+~~- Kollision Asteroid mit Schiff geht nicht~~
 - Punktestand anzeigen
 - Computergegner
 - Musik im Hintergrund
@@ -27,12 +27,13 @@ TODO:
 <<<<<<< HEAD
 - Splashscreen
 =======
-- Alle Klasse und Dateinamen anpassen
+~~- Alle Klasse und Dateinamen anpassen~~
 - Splashscreen
 - unterschiedliche Level
 - Powerups
 - Healthdrop
 - Extra Leben
 - bewegliche Leinwand
+- GameOver teilweise hinterlegt
 
 >>>>>>> 1f0f5cb4849649e9fc416931d9dd42bc51f67bce
