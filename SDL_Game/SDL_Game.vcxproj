@@ -24,6 +24,7 @@
     <ProjectGuid>{1a4e394f-2695-438b-b8f1-7e3a793dbb50}</ProjectGuid>
     <RootNamespace>SDLGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Asteroid</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
