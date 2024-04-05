@@ -23,6 +23,8 @@
 //
 //
 #include "CFramework.hpp"
+#include <iostream>
+#include <fstream>
 //
 // Konstruktor
 //
@@ -32,8 +34,10 @@ CFramework::CFramework()
 {
 	m_pWindow = NULL;
 	m_pRenderer = NULL;
+	m_pKeystate = NULL;
 
 } // Konstruktor
+
 
 
 // Init
@@ -146,7 +150,11 @@ void CFramework::Update()
 bool CFramework::KeyDown(int Key_ID)
 {
 	// Prüfen, ob Taste gedrückt ist
-	return (m_pKeystate[Key_ID] ? true : false); // ternärer Operator
+	//return (m_pKeystate[Key_ID] ? true : false); // ternärer Operator
+	if (m_pKeystate[Key_ID])
+		return true;
+	else
+		return false;
 // ternärer Operator in if ändern
 
 } // KeyDown
@@ -174,4 +182,3 @@ void CFramework::Render ()
 	SDL_RenderPresent(m_pRenderer);
 
 } // Render
-

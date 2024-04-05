@@ -14,8 +14,8 @@ class CFramework : public TSingleton<CFramework>
 {
 	public:
 			CFramework();
-		bool Init	 (int ScreenWidth, int ScreenHeight,	// Spielfeld Breite, Höhe, Farbtiefe, Vollbild j/n
-		   		      int ColorDepth, bool bFullscreen);
+		bool Init	 (int ScreenWidth, int ScreenHeight,
+		   		      int ColorDepth, bool bFullscreen);	// Spielfeld Breite, Höhe, Farbtiefe, Vollbild j/n
 		void Quit	 ();	// Beenden
 		void Update	 ();	// Anzeige aktualisieren
 		void Clear	 ();	// Anzeige säubern

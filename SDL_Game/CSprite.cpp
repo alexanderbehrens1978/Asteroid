@@ -18,6 +18,7 @@
 //********************************************************************
 //
 #include "CSprite.hpp"
+
 //
 // Konstruktor
 //
@@ -45,6 +46,7 @@ CSprite::~CSprite()
 //
 void CSprite::Load(const string sFilename)
 {
+
 	// Bitmap temporär in eine Surface laden
 	SDL_Surface *pTemp = SDL_LoadBMP(sFilename.c_str () );
 	// Prüfen, ob alles glattging
@@ -56,9 +58,12 @@ void CSprite::Load(const string sFilename)
 
 		// Framework herunterfahren
 		g_pFramework->Quit();
-
+		
+		cout << "Das Fenster schliesst sich in 10 Sekunden...\n";
+		SDL_Delay(10000);
 		// Gesamtes Spiel beenden
 		exit(1);
+
 	}
 
 	// Transparente Farbe festlegen
